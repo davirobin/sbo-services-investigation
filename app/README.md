@@ -3,9 +3,9 @@
 Example S3 app built off of AWS SDK for Go.
 
 ## Setup
-For the setup, [IAM credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) are needed to access AWS services along with the region .  Both the Access Key ID and Secret Access Key are needed. If using credentials from awscli, both keys can be found at `~/.aws/credentials`.  Both these keys need to be converted to base64 and replaced in the `Secret.yaml` under `access_key` and `secret_key` respectively.  
+For the setup, [IAM credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) are needed to access AWS services along with the region .  Both the Access Key ID and Secret Access Key are needed. If using credentials from awscli, both keys can be found at `~/.aws/credentials`.  Both these keys need to be converted to base64 and replaced in the `secret.yaml` under `access_key` and `secret_key` respectively.  
 
-For the region, choose the [AWS Region](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)  the service is on. In `Secret.yaml`, replace `region` with the base64 region of the service.
+For the region, choose the [AWS Region](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)  the service is on. In `secret.yaml`, replace `region` with the base64 region of the service.
 
 A bucket will also be needed to connect to.
 
