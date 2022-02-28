@@ -22,12 +22,15 @@ A bucket will also be needed to connect to.
 ## Run App
 
 Once the app has been built, run the command with the namespace the app is installed:
+
 `kubectl get pods -n <namespace>`
 
 Get the name of the pod and run the command, replacing `aws-sdk-pod` with the name of the pod.
+
 `kubectl exec --stdin <aws-sdk-pod> -n <namespace>  -- sh`
 
 Finally, run the command with the name of the bucket being used and the key you want for the test file:
+
 `go run aws-sdk-test.go -b <bucket> -k <key> -d 10m`
 
 If the application runs successfully, a new test file will be uploaded to the defined bucket and key
