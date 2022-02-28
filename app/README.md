@@ -12,9 +12,11 @@ A bucket will also be needed to connect to.
 ## Build
 1. Start minikube
 2. Navigate to `~/sbo-services-investigations/app`
-3. Build the Docker image using the command:
+3. Run the command:
+   `eval $(minikube docker-env)`
+4. Build the Docker image using the command:
 `docker build -t aws-sdk-test .`
-4. Run the commands:
+5. Run the commands:
    `kubectl apply -f secret.yaml `
    `kubectl apply -f app.yaml`
  
