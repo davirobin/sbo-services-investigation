@@ -45,10 +45,36 @@ Get the name of the pod and run the command, replacing `aws-sdk-pod` with the na
 
 `kubectl exec --stdin <aws-sdk-pod> -n <namespace>  -- sh`
 
-Finally, run the command with the name of the bucket being used and the key you want for the test file:
+The app can be run to upload, delete, get, and describe objects within the S3 bucket.
 
-`go run aws-sdk-test.go -b <bucket> -k <key> -d 10m`
+### Upload
 
-If the application runs successfully, a new test file will be uploaded to the defined bucket and key
+Run the command with the name of the bucket being used and the key you want for the test file:
 
+`go run aws-sdk-test.go -u -b <bucket> -k <key> -d 10m`
 
+If the application runs successfully, a new test file will be uploaded to the defined bucket and key.
+
+### Delete
+
+Run the command with the name of the bucket being used and the key you want to delete:
+
+`go run aws-sdk-test.go -r -b <bucket> -k <key> -d 10m`
+
+If the application runs successfully, the selected key will be deleted from the bucket.
+
+### Get
+
+Run the command with the name of the bucket being used and the key of the item to be downloaded:
+
+`go run aws-sdk-test.go -g -b <bucket> -k <key> -d 10m`
+
+If the application runs successfully, a new file will be created in the working directory with the contents of the file in the S3 bucket.
+
+### Info
+
+Run the command with the name of the bucket being used and the key you want to retrieve info on:
+
+`go run aws-sdk-test.go -i -b <bucket> -k <key> -d 10m`
+
+If the application runs successfully, the info of the S3 object will be displayed.
