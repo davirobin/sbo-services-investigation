@@ -1,6 +1,6 @@
 ﻿# AWS SDK S3 App
 
-Example S3 app built off of AWS SDK for Go. This app also utilizes [minikube](https://minikube.sigs.k8s.io/docs/start/).
+Example S3 app built off of [AWS SDK for Go](https://github.com/aws/aws-sdk-go). This app also utilizes [minikube](https://minikube.sigs.k8s.io/docs/start/) and [Docker](https://docs.docker.com/get-docker/).
 
 ## Setup
 ### IAM Credentials
@@ -12,8 +12,11 @@ An [AWS Bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/GetStarted
 
 From the bucket you will need the **Bucket name** along with an **Object Key**. The [Bucket's Region](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_Region.html) is also needed. In `secret.yaml`, add the S3 Bucket's region to the `region` data.
 ## Build
-1. Start minikube
-2. Navigate to
+1. Start minikube;
+
+   `minikube start`
+
+2. Navigate to:
 
    `~/sbo-services-investigations/aws/s3/app`
 
