@@ -15,7 +15,7 @@ From the bucket you will need the **Bucket name** along with an **Object Key**. 
 1. Start minikube
 2. Navigate to
 
-   `~/sbo-services-investigations/app`
+   `~/sbo-services-investigations/aws/s3/app`
 
 3. Run the command:
    
