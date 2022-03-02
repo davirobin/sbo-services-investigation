@@ -3,7 +3,7 @@
 Example S3 app built off of [AWS SDK for Go](https://github.com/aws/aws-sdk-go). This app also utilizes [minikube](https://minikube.sigs.k8s.io/docs/start/) and [Docker](https://docs.docker.com/get-docker/).
 
 ## About
-This application provides test functionality to Amazon Web Services using [AWS SDK for Go](https://github.com/aws/aws-sdk-go). The purpose of the app is to test AWS binding capabilities inside of Kubernetes both with and without the [Service Binding Operator](https://github.com/redhat-developer/service-binding-operator). This particular app binds to AWS S3 and offers the ability to upload, delete, retrieve, and describe bucket objects directly from a Kubernetes container.
+This application provides test functionality of Amazon Web Services using [AWS SDK for Go](https://github.com/aws/aws-sdk-go) inside a Kubernetes container. The purpose of the app is to test AWS binding capabilities inside of Kubernetes both with and without the [Service Binding Operator](https://github.com/redhat-developer/service-binding-operator). This particular app binds to AWS S3 and offers the ability to upload, delete, retrieve, and describe bucket objects directly from a Kubernetes container.
 ## Setup
 ### IAM Credentials
 [IAM credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) are needed to access AWS services along with the region .  Both the **Access Key ID** and **Secret Access Key** are needed. If using credentials from awscli, both keys can be found at `~/.aws/credentials`.  Both these keys need to be converted to base64 and inserted in the `secret.yaml` under `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` respectively.  
