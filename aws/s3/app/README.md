@@ -1,5 +1,5 @@
 ﻿# AWS SDK S3 App
-
+## Info
 Example S3 app built off of [AWS SDK for Go](https://github.com/aws/aws-sdk-go). This app also utilizes [minikube](https://minikube.sigs.k8s.io/docs/start/) and [Docker](https://docs.docker.com/get-docker/).
 
 ## Setup
@@ -53,7 +53,7 @@ Once the app has been built, run the command with the namespace the app is insta
 
 Get the name of the pod and run the command, replacing `aws-sdk-pod` with the name of the pod.
 
-`kubectl exec --stdin <aws-sdk-pod> -n <namespace>  -- sh`
+`kubectl exec --stdin -t <aws-sdk-pod> -n <namespace>  -- sh`
 
 The app can be run to upload, delete, get, and describe objects within the S3 bucket.
 
