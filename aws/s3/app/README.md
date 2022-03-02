@@ -28,13 +28,23 @@ From the bucket you will need the **Bucket name** along with an **Object Key**. 
 
    `docker build -t aws-sdk-test .`
 
-5. Run the commands:
+### App Without SBO
+
+ Run the commands:
    
    `kubectl apply -f secret.yaml `
    
    `kubectl apply -f app.yaml`
- 
-    
+
+### App With SBO
+   
+ Run the commands:
+   
+   `kubectl apply -f secret.yaml `
+   
+   `kubectl apply -f app-sb.yaml`
+   
+   `kubectl apply -f service-binding.yaml`
 ## Run App
 
 Once the app has been built, run the command with the namespace the app is installed:
